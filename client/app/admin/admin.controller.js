@@ -2,6 +2,8 @@
 
 angular.module('sipaApp')
   .controller('AdminCtrl', function ($scope, $http, Auth, User) {
+    // Change title base on state
+    Page.setTitle(Page.getTitle());
 
     // Use the User $resource to fetch all users
     $scope.users = User.query();

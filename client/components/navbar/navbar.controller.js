@@ -5,6 +5,9 @@ angular.module('sipaApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    }, {
+      'title': 'Explore',
+      'link': '/explore'
     }];
 
     $scope.isCollapsed = true;

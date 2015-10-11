@@ -1,7 +1,11 @@
 'use strict';
 
 angular.module('sipaApp')
-  .controller('LoginCtrl', function ($scope, Auth, $location, $window) {
+  .controller('LoginCtrl', function ($scope, Auth, $location, $window, Page) {
+    // Change title base on state
+    Page.setTitle(Page.getTitle());
+
+    // General controller
     $scope.user = {};
     $scope.errors = {};
 

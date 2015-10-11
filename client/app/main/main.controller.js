@@ -1,7 +1,11 @@
 'use strict';
 
 angular.module('sipaApp')
-  .controller('MainCtrl', function ($scope, $http, socket) {
+  .controller('MainCtrl', function ($scope, $http, socket, Page) {
+    // Change title base on state
+    Page.setTitle(Page.getTitle());
+
+    // Things controller
     $scope.awesomeThings = [];
 
     $http.get('/api/things').success(function(awesomeThings) {

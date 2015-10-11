@@ -2,6 +2,9 @@
 
 angular.module('sipaApp')
   .controller('SettingsCtrl', function ($scope, User, Auth) {
+    // Change title base on state
+    Page.setTitle(Page.getTitle());
+
     $scope.errors = {};
 
     $scope.changePassword = function(form) {
