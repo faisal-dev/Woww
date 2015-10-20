@@ -1,0 +1,28 @@
+.navbar-dark {
+  background-color: $dark-blue;
+
+  .glyphicon {
+    color: rgba($white, .8);
+  }
+
+  .nav > li > a {
+    color: rgba($white, .8);
+    margin-top: 8px;
+    padding: 8px 15px;
+
+    &:focus {
+      outline-style: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: $white;
+    }
+  }
+}
+
+// Fixed nav
+.nav-placeholder {
+  height: 50px;
+}

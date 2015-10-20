@@ -1,0 +1,47 @@
+// search-bar color
+$list-active-bg-color: rgba($black, .04);
+$list-bd-color: rgba($black, .2);
+$input-bg-color: darken($dark-blue, 10%);
+$input-bd-color: rgba($white, .4);
+
+.search-bar {
+  width: 350px;
+
+  li {
+    cursor: pointer;
+    padding: 1rem 4rem;
+    transition: background-color .5s ease;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $list-bd-color;
+    }
+  }
+
+  .dropdown-menu,
+  .search-input {
+    width: 88%;
+  }
+
+  .dropdown-menu {
+    padding: 0;
+  }
+
+  .search-input {
+    background-color: $input-bg-color;
+    border: 1px solid $input-bd-color;
+    display: inline-block;
+    margin-left: 1.2rem;
+    margin-top: .8rem;
+    transition: background-color .5s ease;
+
+    &:focus {
+      background-color: rgba($white, .9);
+      box-shadow: 0;
+    }
+  }
+
+  .active {
+    background-color: $list-active-bg-color;
+  }
+}
+

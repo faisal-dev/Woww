@@ -1,0 +1,11 @@
+script(id='customTemplate.html' type='text/ng-template')
+  span(ng-bind-html='match.label | typeaheadHighlight:query')
+
+div.search-bar
+  span.glyphicon.glyphicon-search
+  input.form-control.search-input(
+    type='text'
+    ng-model='asyncSelected'
+    placeholder='Search'
+    typeahead='name for name in itemLists($viewValue)'
+    typeahead-template-url='customTemplate.html')

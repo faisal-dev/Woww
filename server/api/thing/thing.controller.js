@@ -20,6 +20,18 @@ exports.index = function(req, res) {
   });
 };
 
+// Get query things
+exports.search = function(req, res) {
+  // console.log(req.query.name);
+  // var test = '/\b' + req.query.name + '/';
+  var qs = {name: new RegExp('\\b' + req.query.name, 'i')};
+  console.log(qs);
+  Thing.find(qs, function (err, things) {
+    if(err) { return handleError(res, err); }
+    return res.status(200).json(things);
+  });
+};
+
 // Get a single thing
 exports.show = function(req, res) {
   Thing.findById(req.params.id, function (err, thing) {

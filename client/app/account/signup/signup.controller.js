@@ -1,9 +1,7 @@
 'use strict';
 
 angular.module('sipaApp')
-  .controller('SignupCtrl', function ($scope, Auth, $location, $window, Page) {
-    // Change title base on state
-    Page.setTitle(Page.getTitle());
+  .controller('SignupCtrl', function ($scope, Auth, $location, $window) {
 
     // General controller
     $scope.user = {};

@@ -1,9 +1,8 @@
 'use strict';
 
 angular.module('sipaApp')
-  .controller('MainCtrl', function ($scope, $http, socket, Page) {
-    // Change title base on state
-    Page.setTitle(Page.getTitle());
+  .controller('MainCtrl', function ($scope, $http, socket) {
+    $scope.windowHeight = $(window).height();
 
     // Things controller
     $scope.awesomeThings = [];
